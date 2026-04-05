@@ -2,6 +2,8 @@
 
 **Chat with any document using AI-powered Retrieval-Augmented Generation**
 
+**[Live Demo](https://ragdocs.onrender.com)**
+
 RAGDocs lets you upload PDF, DOCX, TXT, MD, CSV, and Excel files, then ask questions in natural language. The system extracts text, creates vector embeddings, and uses semantic search + LLM generation to provide accurate, cited answers grounded in your documents.
 
 ![CI](https://github.com/JuanCardona97/ragdocs/actions/workflows/ci.yml/badge.svg)
@@ -252,12 +254,12 @@ ragdocs/
 
 ## Roadmap
 
+- [x] Deploy to Render with live demo
 - [ ] Authentication (Google/GitHub OAuth)
 - [ ] Multi-user support with isolated document spaces
-- [ ] Deploy to Railway/Render with one-click setup
 - [ ] Support for open-source LLMs via Ollama
-- [ ] Document annotations and highlights
 - [ ] Export conversations as PDF/Markdown
+- [ ] Document annotations and highlights
 
 ---
 
