@@ -22,13 +22,12 @@ class Settings(BaseSettings):
     # ChromaDB
     CHROMA_PERSIST_DIR: str = "./data/chroma"
 
-    # CORS
-    ALLOWED_ORIGINS: list[str] = [
-        "http://localhost:3000",
-        "http://localhost:5173",
-        "https://ragdocs.onrender.com",
-        "https://ragdocs-frontend.onrender.com",
-    ]
+    # CORS (comma-separated string, parsed into list)
+    ALLOWED_ORIGINS: str = "http://localhost:3000,http://localhost:5173,https://ragdocs.onrender.com,https://ragdocs-frontend.onrender.com"
+
+    @property
+    def allowed_origins_list(self) -> list[str]:
+        return [o.strip() for o in self.ALLOWED_ORIGINS.split(",") if o.strip()]
 
     # Server
     HOST: str = "0.0.0.0"
