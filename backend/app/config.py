@@ -26,6 +26,8 @@ class Settings(BaseSettings):
     ALLOWED_ORIGINS: list[str] = [
         "http://localhost:3000",
         "http://localhost:5173",
+        "https://ragdocs.onrender.com",
+        "https://ragdocs-frontend.onrender.com",
     ]
 
     # Server
